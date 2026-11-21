@@ -9,8 +9,10 @@ import org.junit.Assert.assertNotEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
+@Config(sdk = [35])
 class SmsDatabaseTest {
  @Test fun storesRulesAndMetadataAndRejectsDuplicateFingerprint() = runBlocking {
   val context = ApplicationProvider.getApplicationContext<Context>()
