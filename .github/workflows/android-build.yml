@@ -52,7 +52,7 @@ jobs:
           test -f "$ANDROID_HOME/platforms/android-37/android.jar"
 
       - name: Run unit tests
-        run: ./gradlew --no-daemon testDebugUnitTest
+        run: ./gradlew --no-daemon testDebugUnitTest --stacktrace
 
       - name: Run Android lint
         run: ./gradlew --no-daemon lintDebug
